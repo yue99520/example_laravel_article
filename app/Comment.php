@@ -8,11 +8,7 @@ class Comment extends Model
 {
     use MorphComment;
 
-    //拿到一個commentable物件（上層）
-    public function commentable()
-    {
-        return $this->morphTo();
-    }
+    use MorphLike;
 
     public function user()
     {
